@@ -37,7 +37,7 @@ parts:
       build-path: $SNAPCRAFT_STAGE/opt/ros/kinetic
 
       # Run-time location of the underlay
-      #run-path: $SNAP/ros-base/opt/ros/kinetic
+      run-path: /snap/ros-base/current/opt/ros/kinetic
     catkin-packages:
       - talker
       - listener
