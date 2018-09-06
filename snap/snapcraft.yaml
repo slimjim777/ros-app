@@ -1,7 +1,7 @@
 name: ros-app
 version: '1.0'
 grade: stable
-confinement: strict
+confinement: devmode
 summary: ROS App Snap
 description: Contains talker/listener ROS packages and a .launch file.
 passthrough:
@@ -17,12 +17,12 @@ parts:
     plugin: catkin
     rosdistro: kinetic
     include-roscore: false
-    # underlay:
-    #   # Build-time location of the underlay
-    #   build-path: $SNAPCRAFT_PART_INSTALL/opt/ros/kinetic
+    underlay:
+      # Build-time location of the underlay
+      build-path: $SNAPCRAFT_PART_INSTALL/opt/ros/kinetic
 
-    #   # Run-time location of the underlay
-    #   run-path: /snap/core18-ros/current/opt/ros/kinetic
+      # Run-time location of the underlay
+      run-path: /opt/ros/kinetic
     catkin-packages:
       - talker
       - listener
