@@ -26,7 +26,7 @@ parts:
     catkin-packages:
       - talker
       - listener
-    stage-packages:
+    build-packages:
       - libc6
 
   run-system:
