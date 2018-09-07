@@ -11,6 +11,10 @@ apps:
   launch-project:
     command: run-system
     plugs: [network, network-bind]
+  run:
+    command: run-system
+    daemon: simple
+    restart-condition: never
 
 parts:
   ros-app:
