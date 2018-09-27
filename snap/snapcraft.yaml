@@ -5,16 +5,12 @@ confinement: strict
 summary: ROS App Snap
 description: Contains talker/listener ROS packages and a .launch file.
 passthrough:
-  base: core18-ros
+  base: core18-ros-james
 
 apps:
   launch-project:
     command: run-system
     plugs: [network, network-bind]
-  run:
-    command: run-system
-    daemon: simple
-    restart-condition: never
 
 parts:
   ros-app:
